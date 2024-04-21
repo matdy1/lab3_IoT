@@ -1,14 +1,43 @@
 package com.example.lab3.dto;
 
+import java.util.List;
+
 public class Movies {
 
+    private String Title;
     private String Director;
     private String Actors;
     private String Released;
     private String Genre;
     private String Writer;
     private String Plot;
-    private Ratings Ratings;
+    private List<Ratings> Ratings;
+
+    private String imdbID;
+
+    public List<com.example.lab3.dto.Ratings> getRatings() {
+        return Ratings;
+    }
+
+    public void setRatings(List<com.example.lab3.dto.Ratings> ratings) {
+        Ratings = ratings;
+    }
+
+    public String getTitle() {
+        return Title;
+    }
+
+    public void setTitle(String title) {
+        Title = title;
+    }
+
+    public String getImdbID() {
+        return imdbID;
+    }
+
+    public void setImdbID(String imdbID) {
+        this.imdbID = imdbID;
+    }
 
     public String getDirector() {
         return Director;
@@ -58,11 +87,4 @@ public class Movies {
         Plot = plot;
     }
 
-    public com.example.lab3.dto.Ratings getRatings() {
-        return Ratings;
-    }
-
-    public void setRatings(com.example.lab3.dto.Ratings ratings) {
-        Ratings = ratings;
-    }
 }

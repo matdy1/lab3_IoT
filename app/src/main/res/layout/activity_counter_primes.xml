@@ -12,7 +12,6 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@color/blue"
@@ -34,23 +33,21 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Su primo es: " />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/contadorPrimo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:text="60" />
+                android:text="" />
         </LinearLayout>
 
         <Button
-            android:id="@+id/button12"
             android:layout_width="450dp"
             android:layout_height="1dp"
             android:layout_marginStart="1dp"
@@ -76,14 +73,12 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="100dp"
                     android:text="Ascender/Descender" />
 
                 <TextView
-                    android:id="@+id/textView13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Pausar/Reiniciar" />
@@ -95,14 +90,14 @@
                 android:layout_marginTop="20dp">
 
                 <Button
-                    android:id="@+id/button10"
+                    android:id="@+id/ascDes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="100dp"
                     android:text="Descender" />
 
                 <Button
-                    android:id="@+id/button11"
+                    android:id="@+id/pausa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Pausar" />
@@ -110,8 +105,25 @@
 
         </TableLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="340dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/modoConteo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="" />
+        </LinearLayout>
+
         <Button
-            android:id="@+id/button13"
             android:layout_width="450dp"
             android:layout_height="1dp"
             android:layout_marginStart="1dp"
@@ -135,18 +147,43 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <EditText
-                android:id="@+id/textView3"
+                android:id="@+id/ordenPrimo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Orden del Primo" />
+                android:digits="0123456789"
+                android:hint="Orden del Primo"
+                android:inputType="number" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/buscarPrimo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Buscar" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="670dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/regresar1"
+                android:layout_width="2dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Regresar" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
